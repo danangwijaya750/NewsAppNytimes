@@ -9,7 +9,8 @@ data class ArticleLocal (
     @PrimaryKey var id: Long = 0,
     var title:String ="",
     var updated: String = "",
+    var published_date:String="",
     var `abstract`: String = "",
     ){
-    fun toResult()=Result(abstract= `abstract`, id=id, title = title, updated = updated)
+    fun toResult()=Result(abstract= `abstract`, id=id, title = title, updated = updated, published_date = published_date)
 }

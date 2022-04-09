@@ -35,7 +35,7 @@ data class Result(
     var uri: String = "",
     var url: String = ""
 ):Parcelable{
-    fun toLocalData()=ArticleLocal(id,title,updated,`abstract`)
+    fun toLocalData()=ArticleLocal(id,title,updated,published_date,`abstract`)
 }
 
 @Parcelize

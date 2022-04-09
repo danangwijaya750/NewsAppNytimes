@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(),Observer<MainViewModel.MainState> {
             }, bind = {data, _, vb->
                 with(vb as ItemLayoutBinding){
                     tvTitle.text=data.title
-                    tvDatePost.text=data.updated
+                    tvDatePost.text=data.published_date
                     if(data.media.isNotEmpty()) {
                         Glide.with(this.root).load(data.media[0].media_metadata[0].url)
                             .into(ivThumbnail)
